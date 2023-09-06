@@ -1,17 +1,115 @@
-<html>
-    <head>
-        <style>
-            body{
-                min-width: 100px;
-                min-height: 100px;
-                border: solid rgb(167, 167, 167) 4px;
-                background-color: rgba(0, 0, 0, 0.39);
-            }
-        </style>
-        <title>Mr.Sai's Protfolio</title>
+<!DOCTYPE html>
+<html lang="en">
 
-    </head>
-    <body>
-        <h1>Empthy</h1>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my profile</title>
+    <style>
+        #name {
+            width: 100%;
+            background-color: rgb(61, 61, 61);
+            color: white;
+            border-radius: 10px solid blue;
+        }
+        body{
+            background-color: #050505;
+            color:white;
+        }
+
+        .parchment {
+            position: fixed;
+            display: flex;
+            width: 75%;
+            min-height: calc((1vw + 1vh) * 75);
+            /* center page with absolute position */
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 2em 0;
+            padding: 6em;
+            box-shadow: 4px 6px 20px rgb(71, 71, 71), 0 0 60px #b4b1b1 inset;
+            background:  #505050;
+            filter: url(#wavy2);
+            transition: all 0.3s ease-out;
+            z-index: -10;
+            /* Ensure the parchment box is above the SVG */
+        }
+
+        .parchment:hover {
+            box-shadow: 8px 12px 20px rgb(29, 29, 29), 1px 0 60px #b8b6b6 inset;
+            background:  #161616;
+        }
+        h1{
+            font-family: monospace;
+        }
+
+        .content {
+
+            position: relative;
+            /* Ensure text is positioned relative to the parchment */
+            z-index: -2;
+            /* Place text above the parchment background */
+            color: #fff;
+            /* Set text color to be visible on the parchment */
+        }
+
+        .top_text {
+            position: relative;
+            /* Ensure text is positioned relative to the parchment */
+            z-index: 2;
+            /* Place text above the parchment background */
+            color: #050505;
+            /* Set text color to be visible on the parchment */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parchment">
+        <div class="content">
+            <!-- Your text content here -->
+            <marquee direction="right">
+                <h1>##############################################</h1>
+            </marquee>
+            <p>This is some text on the parchment.</p>
+        </div>
+    </div>
+
+    <svg>
+        <filter id="wavy2">
+
+            <feTurbulence x="0" y="0" baseFrequency="0.01" numOctaves="10.1" seed="100"></feTurbulence>
+            <feDisplacementMap id ="uni" in="SourceGraphic" scale="800" />
+        </filter>
+    </svg>
+    <div id="top_text">
+        
+            <h1>B Sai kiran reddy portfolio</h1>
+        
+    </div>
+    <script>
+let i = 800;
+let increasing = true;
+
+function updateScale() {
+    if (increasing && i < 1000) {
+        i++;
+    } else if (!increasing && i > 800) {
+        i--;
+    } else {
+        increasing = !increasing;
+    }
+    
+    document.querySelector("#wavy2 feDisplacementMap").setAttribute("scale", i);
+    setTimeout(updateScale, 17);
+    // Delay for 10 milliseconds between updates
+}
+
+// Start the animation
+updateScale();
+
+    </script>
+</body>
+
 </html>

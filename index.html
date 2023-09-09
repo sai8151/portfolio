@@ -4,112 +4,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my profile</title>
-    <style>
-        #name {
-            width: 100%;
-            background-color: rgb(61, 61, 61);
-            color: white;
-            border-radius: 10px solid blue;
-        }
-        body{
-            background-color: #050505;
-            color:white;
-        }
+    <title>B. Sai Kiran Reddy - Portfolio</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+<style>
+    /* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+	margin: 0;
+	padding: 10px;
+}
+a{
+	background-color: rgb(102, 102, 102);
+	border: 10px solid rgb(102, 102, 102);
+	border-radius: 10px;
+	transition: all 0.3s ease-in-out;
+}
+a:hover{
+	border: 10px solid rgb(253, 252, 252);
+	background-color: #fcfcfc;
+	color:#000000;
+}
+nav {
+	display: flex;
+	padding: 15px;
+	background-color: #85858557;
+	margin: 10px;
+	border-radius: 10px;
+	
+}
+/* Set a background color and text color for the body */
+body {
+	font-family: Arial, sans-serif;
+	color: #020202;
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	/* Hide horizontal scrollbar */
+}
 
-        .parchment {
-            position: fixed;
-            display: flex;
-            width: 75%;
-            min-height: calc((1vw + 1vh) * 75);
-            /* center page with absolute position */
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            margin: 2em 0;
-            padding: 6em;
-            box-shadow: 4px 6px 20px rgb(71, 71, 71), 0 0 60px #b4b1b1 inset;
-            background:  #505050;
-            filter: url(#wavy2);
-            transition: all 0.3s ease-out;
-            z-index: -10;
-            /* Ensure the parchment box is above the SVG */
-        }
+/* Style the header section */
+header {
+	background-color: #4141415e;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
 
-        .parchment:hover {
-            box-shadow: 8px 12px 20px rgb(29, 29, 29), 1px 0 60px #b8b6b6 inset;
-            background:  #161616;
-        }
-        h1{
-            font-family: monospace;
-        }
+header:hover {
+	backdrop-filter: blur(30px);
+}
 
-        .content {
+/* Style the navigation menu */
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
 
-            position: relative;
-            /* Ensure text is positioned relative to the parchment */
-            z-index: -2;
-            /* Place text above the parchment background */
-            color: #fff;
-            /* Set text color to be visible on the parchment */
-        }
 
-        .top_text {
-            position: relative;
-            /* Ensure text is positioned relative to the parchment */
-            z-index: 2;
-            /* Place text above the parchment background */
-            color: #050505;
-            /* Set text color to be visible on the parchment */
-        }
-    </style>
+
+nav ul li {
+	display: inline;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/* Style the main content sections */
+section {
+	/*background-color: rgba(255, 255, 255, 0.9);*/
+	background-color: #9696965b	;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Create a 3D background effect */
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background: linear-gradient(45deg, #000000, #ffffff, #000000);
+	background-size: 300% 300%;
+	animation: gradient 10s linear infinite;
+}
+img{
+	border: 2px solid rgba(0, 0, 0, 0.308);
+	border-radius: 50%;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+</style>
+    <!-- You can link to an external CSS file for styling -->
 </head>
 
 <body>
-    <div class="parchment">
-        <div class="content">
-            <!-- Your text content here -->
-            <marquee direction="right">
-                <h1>##############################################</h1>
-            </marquee>
-            <p>This is some text on the parchment.</p>
-        </div>
-    </div>
+    <div class="background"></div>
+    <header>
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Profile" width="100px" height="100px">
+        <h1>B. Sai Kiran Reddy</h1>
+        <p>Undergraduate at BITM University, Pursuing 4th Year with Academic Distinction</p>
+        <p>Email: saikiranreddy8151@gmail.com | Phone: 8884887062</p>
+        <p>Location: Bellary, India</p>
+    </header>
 
-    <svg>
-        <filter id="wavy2">
+    <nav>
+        <ul>
+            <li><a href="www.hackerrank.com/saikiranreddy812" target="_blank">HackerRank Profile</a></li>
+            <li><a href="linkedin.com/in/b-sai-kiran-reddy-54982b232" target="_blank">LinkedIn Profile</a></li>
+            <li><a href="github.com/sai8151" target="_blank">GitHub Profile</a></li>
+        </ul>
+    </nav>
 
-            <feTurbulence x="0" y="0" baseFrequency="0.01" numOctaves="10.1" seed="100"></feTurbulence>
-            <feDisplacementMap id ="uni" in="SourceGraphic" scale="800" />
-        </filter>
-    </svg>
-    <div id="top_text">
-        
-            <h1>B Sai kiran reddy portfolio</h1>
-        
-    </div>
-    <script>
-let i = 800;
-let increasing = true;
+    <section id="container">
+        <h2>Education</h2>
+        <p><strong>B.E in Computer Engineering</strong></p>
+        <p><em>BALLARI INSTITUTE OF TECHNOLOGY AND MANAGEMENT, BALLARI, INDIA</em></p>
+        <ul>
+            <li>Java</li>
+            <li>C++</li>
+            <li>SQL basics</li>
+            <li>Android Application Development</li>
+            <li>HTML/CSS</li>
+            <li>Linux</li>
+        </ul>
+    </section>
 
-function updateScale() {
-    if (increasing && i < 1000) {
-        i++;
-    } else if (!increasing && i > 800) {
-        i--;
-    } else {
-        increasing = !increasing;
-    }
-    
-    document.querySelector("#wavy2 feDisplacementMap").setAttribute("scale", i);
-    setTimeout(updateScale, 17);
-    // Delay for 10 milliseconds between updates
-}
+    <section id="container">
+        <h2>Courses</h2>
+        <ul>
+            <li>Data Structures and Algorithms in Java</li>
+            <li>Android App Development</li>
+            <li>Web Development</li>
+            <li>DBMS</li>
+        </ul>
+    </section>
 
-// Start the animation
-updateScale();
+    <section id="container">
+        <h2>Personal Projects</h2>
+        <article>
+            <b>ESPController: Android App for Remote GPIO Control with Real-Time Logs (03/2023 - 06/2023)</b>
+            <p>Developed an ESP8266 controller Android app for remote GPIO control with a web interface.</p>
+            <p>Implemented JavaScript evaluation to display real-time logs of GPIO actions.</p>
+            <p>Utilized WebView and atomic boolean for efficient communication with the ESP8266 device.</p>
+        </article>
+        <article>
+            <b>BCM (BULK CERTIFICATE MAILER) (07/2022 - 11/2022)</b>
+            <p>Developed Unix app for automated bulk email delivery to clients.</p>
+            <p>Customized subject, body, and attachments based on data from CSV sheet.</p>
+        </article>
+    </section>
 
-    </script>
+    <section id="container">
+        <h2>Work Experience</h2>
+        <p><strong>Digital Healthcare Innovator: Revolutionizing Patient Care with Online Appointments</strong></p>
+        <p><em>Sai Pavan Physio Clinic, Bellary, India</em></p>
+        <p>June 2023 - Present</p>
+        <ul>
+            <li>Created user-friendly website facilitating online appointments with GoDaddy's website builder.</li>
+            <li>Enhanced patient access and engagement, optimizing appointment bookings.</li>
+            <li>Utilized AI-driven design for effective content and seamless user experience.</li>
+            <li>Skillfully integrated informative content on various physiotherapy treatments, showcasing expertise in
+                healthcare communication.</li>
+        </ul>
+        <p>Contact: Srinu Sagar - +91 99863 64413</p>
+    </section>
+
+    <section id="container">
+        <h2>Certificates</h2>
+        <ul>
+            <li>C++ Complete Course For Beginners - Udemy, Inc. (01/2022 - 02/2022)</li>
+            <li>Programming Foundations: APIs and Web Services - LinkedIn Learning (07/2022 - 08/2022)</li>
+            <li>Google Cloud Platform (GCP) Essential Training for Developers - LinkedIn Learning (08/2023 - 08/2023)
+            </li>
+        </ul>
+    </section>
+
+    <section id="container">
+        <h2>Languages</h2>
+        <ul>
+            <li>English - Full Professional Proficiency</li>
+            <li>Hindi - Professional Working Proficiency</li>
+            <li>Telugu - Native or Bilingual Proficiency</li>
+            <li>Kannada - Native or Bilingual Proficiency</li>
+        </ul>
+    </section>
+
+    <section id="container">
+        <h2>Interests</h2>
+        <ul>
+            <li>Cinematography</li>
+            <li>Photography</li>
+            <li>Programming</li>
+        </ul>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
 
 </html>

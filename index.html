@@ -167,7 +167,6 @@
             color: transparent;
             position: absolute;
             text-align: center;
-            user-select: none;
             z-index: -1;
             word-break: break-all;
             height: 375px;
@@ -415,7 +414,6 @@
             color: transparent;
             position: absolute;
             text-align: center;
-            user-select: none;
             z-index: -1;
             word-break: break-all;
             height: 375px;
@@ -541,16 +539,12 @@
         }
 
         .content-how-it-works .btn {
-            display: inline-block;
+            display: none;
             font-family: "Source Sans Pro", Arial, sans-serif;
             font-weight: 400;
             text-align: center;
             white-space: nowrap;
             vertical-align: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
             border: 1px solid transparent;
             min-width: 100px;
             text-transform: capitalize;
@@ -608,12 +602,12 @@
         }
 
         .content-how-it-works .d-none {
-            display: none !important;
+            display: none;
         }
 
         .content-how-it-works .btn:not(:disabled) {
-            cursor: pointer;
             display: none;
+            cursor: pointer;
         }
 
         .content-how-it-works .h1 {
@@ -697,6 +691,7 @@
 
         .content-how-it-works .btn-primary.btn {
             color: #fff;
+            display: none;
         }
 
         .content-how-it-works ul {
@@ -1515,7 +1510,6 @@
         content="A+N5HpM5gDAUeupaWw3J2yuMrpgH0IC7KtFHAqtmHkW8Vr+dPpJWuOpMNIRh3ybxyoIUKlvDQs7+VGPfYdQ/qQUAAABxeyJvcmlnaW4iOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkZlZENtQXV0b1JlYXV0aG4iLCJleHBpcnkiOjE2OTE1MzkxOTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
     <style id="googleidentityservice_button_styles">
         .qJTHM {
-            -webkit-user-select: none;
             color: #202124;
             direction: ltr;
             -webkit-touch-callout: none;
@@ -1603,7 +1597,6 @@
             box-sizing: border-box;
             -webkit-transition: background-color .218s, border-color .218s;
             transition: background-color .218s, border-color .218s;
-            -webkit-user-select: none;
             -webkit-appearance: none;
             background-color: #fff;
             background-image: none;
@@ -2871,6 +2864,44 @@
 
                     .social-text {
                         color: #094d73;
+                    }
+
+                    .btn {
+                        display: none;
+                        font-family: "Nunito", sans-serif;
+                        font-weight: 800;
+                        text-align: center;
+                        white-space: nowrap;
+                        vertical-align: middle;
+                        border: 2px solid rgba(0, 0, 0, 0);
+                        min-width: 100px;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        padding: 0 20px;
+                        font-size: 20px;
+                        line-height: 4.6rem;
+                        border-radius: 50px;
+                        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                    }
+
+                    document,
+                    #dummyDocument {
+                        box-sizing: content-box;
+                        color: initial;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+                    .document,
+                    #dummyDocument {
+                        box-sizing: content-box;
+                        color: initial;
+                        margin-left: auto;
+                        margin-right: auto;
+                        -webkit-user-select: auto;
+                        -moz-user-select: auto;
+                        -ms-user-select: auto;
+                        user-select: auto;
                     }
                 </style>
             </div>
